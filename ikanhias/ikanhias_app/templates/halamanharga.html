@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>{{ Heading }}</h1>
+    <ul>
+        {% for ikan_hias in fish %}
+            <li>{{ikan_hias.harga}}</li>    
+        {% endfor %}
+    </ul>
+    
+
+
+
+{% endblock %}

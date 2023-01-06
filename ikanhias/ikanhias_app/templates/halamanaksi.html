@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="card">
+    <div class="row no-gutters">
+        <div class="col-md-5" style="background: white;">
+            <img src=" {% static fish.gambar %}" class="card-img h-100" width = "140" alt="...">
+        </div>
+        <div class="col-md-7">
+            <div class="card-body">
+                <h2 class="card-title" style="margin-left: -10px;">{{Heading}}</h2><br>
+                <p class="card-text" style="font-size: 17px;">Nama Ikan : {{fish.nama_ikan}}</p>
+                <p class="card-text" style="font-size: 17px;"> Asal Ikan : {{fish.asal_ikan}}</p>
+                <p class="card-text" style="font-size: 17px;">Harga Ikan : {{fish.harga}}ribu</p>
+                <p class="card-text" style="font-size: 17px;">Jenis Ikan : {{fish.jenis_id}}</p>
+                <h3 class="card-title">Deskripsi</h3><br>
+                <a>{{fish.penjelasan}}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

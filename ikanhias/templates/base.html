@@ -1,0 +1,180 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ Title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  </head>
+  <body>
+    <nav class="navbar" style="background-color: brown;">
+      <div class="container-fluid">
+      <nav class="navbar bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="{% static 'logoikan.png' %} " alt="Logo" width="95" height="70" class=" align-text-top">
+          </a>
+        </div>
+      </nav>
+        <a class="navbar-brand" href="/halamandata" style="color: white; padding-right: 780px; font-size: 35px;"> IkanHias.ID </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-10 mb-lg-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/halamandata" style="color: white;">HOME</a>
+              <a class="nav-link active" aria-current="page" href="/tambahikanhias" style="color: white;">CRUD 1</a>
+           
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br>
+    <div class="container">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'ikan.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'ikanclownfish.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'ikanangelfish.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div><br>
+    
+    
+    {% block content %}
+    {% endblock %}
+      <br>
+    <!-- Footer -->
+<footer class="text-center text-lg-start bg-white text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-instagram"></i>
+      </a>
+
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h3 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3 text-secondary"></i>IkanHias.ID
+          </h3>
+          <p>
+            IkanHias.ID merupakan website tentang edukasi macam-macam ikan hias baik ikan hias air tawar maupun ikan hias air laut yang didalamnya juga terdapat beberapa referensi peta lokasi toko-toko ikan hias air laut dan ikan hias air tawar yang tersebar 
+            di daerah Pulau Jawa.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            About
+          </h6>
+          <p>
+            <a href="/halamandata" class="text-reset">Ikan Hias AirTawar</a>
+          </p>
+          <p>
+            <a href="/halamandata" class="text-reset">Ikan Hias AirLaut</a>
+          </p>
+          <p>
+            <a href="/halamandata" class="text-reset">Asal Ikan Hias</a>
+          </p>
+          
+        </div>
+        <!-- Grid column -->
+
+       
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3 text-secondary"></i> Bekasi, Jawa Barat, Indonesia.</p>
+          <p>
+            <i class="fas fa-envelope me-3 text-secondary"></i>
+            ikanhias_id@gmail.com
+          </p>
+          <p><i class="fas fa-phone me-3 text-secondary"></i> (081)-23456789</p>
+          
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+</footer>
+
+      <!-- Copyright -->
+      <div class="text-center text-dark p-3" style="background-color: rgb(230, 218, 220);">
+        Ahmad Muzakki SIK A/3<br>
+        © 2023 :
+       <a class="text-reset fw-bold" href="">Sistem Informasi Kelautan</a>
+      </div>
+      
+      <!-- Copyright -->
+    </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+        <script> 
+          var petaku = L.map('peta').setView([-7.499482920573415, 110.81060185977485], 7);
+          L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          }).addTo(petaku);
+
+          L.marker([-6.969603270949679, 110.42589390008305]).addTo(petaku).bindPopup('PUSAT TOKO IKAN HIAS AIR LAUT <br> KOTA SEMARANG <br> Jl. K.H. Agus Salim No.22-23, Purwodinatan, Kecamatan Semarang Tengah, Kota Semarang, Jawa Tengah 50137');
+          L.marker([-6.9103555202032485, 109.67837513062845]).addTo(petaku).bindPopup('TOKO IKAN HIAS AIR TAWAR <br> KOTA PEKALONGAN <br> Jl. Hos Cokroaminoto, Kelurahan Yosorejo, Kecamatan Pekalongan Selatan. Kelurahan Yosorejo, Kota Pekalongan, Jawa Tengah, 51136');
+          L.marker([-6.951139420006138, 109.13926299409829]).addTo(petaku).bindPopup('TOKO IKAN HIAS AIR TAWAR <br> KOTA TEGAL <br> Jl. Kapten Tendean, Mingkrik, Pakembaran, Kec. Slawi, Tegal, Jawa Tengah 52415 Rt004, Mingkrik, Pakembaran, Kecamatan. Slawi, Kabupaten Tegal, Jawa Tengah Rw001');
+          L.marker([-6.608326850898659, 106.78164148115775]).addTo(petaku).bindPopup('PUSAT TOKO IKAN HIAS AQUARIUM LAUT<br> KOTA BOGOR <br> Komp Mekar Baru blok A no 5 Bojong Jengkol Pasir Kuda, RT.05/RW.02, depan SMKIT, INSANTODA, Kota Bogor, Jawa Barat 16119');
+          L.marker([-7.9972134066223095, 110.32704466284225]).addTo(petaku).bindPopup('PUSAT TOKO IKAN HIAS MINA PETUNG <br> KABUPATEN BANTUL <br> Timur pasar petung Tegaltapen rt01, Galan, Tirtosari, Kecamatan. Kretek, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55772');
+          L.marker([-6.263896818017294, 107.00975371941877]).addTo(petaku).bindPopup('PUSAT PROMOSI TOKO IKAN HIAS <br> KOTA BEKASI <br> Jl. Pariwisata, RT.001/RW.002, Pengasinan, Kecamatan. Rawalumbu, Kota Bekasi, Jawa Barat 17115');
+          L.marker([-6.213277007044205, 106.86247131533659]).addTo(petaku).bindPopup('PUSAT PASAR IKAN HIAS <br> KOTA JAKARTA TIMUR <br> RT.2/RW.6, Bali Mester, Kecamatan Jatinegara, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13310');
+          L.marker([-7.972877723332676, 112.66057218324464]).addTo(petaku).bindPopup('PUSAT TOKO IKAN HIAS AIR LAUT <br> KOTA MALANG <br> masjid al hafez, perumhan tirta kencana b2, Jalan kyai, Jl. Raya Ki Ageng Gribig Gg. 2(lesanpuro, Gg. 2, besar, Kecamatan. Kedungkandang, Kota Malang, Jawa Timur 65126');
+          L.marker([-6.918906203746309, 112.05303073460068]).addTo(petaku).bindPopup('PUSAT TOKO IKAN HIAS KOTA LAMA <br> KABUPATEN TUBAN <br> Jl. Unnamed Road Kali Gayam, Krajan, RT.02/RW.09, Jarum, Prunggahan Kulon, Kecamatan. Semanding, Kabupaten Tuban, Jawa Timur 62381');
+          L.marker([-6.948418591218136, 107.65533215938433]).addTo(petaku).bindPopup('TOKO IKAN HIAS METRO AQUARIUM <br> KOTA BANDUNG <br> Jl. Margasari No.28, RT.5/RW.10, Margasari, Kecamatan Buahbatu, Kota Bandung, Jawa Barat 40287');
+          L.marker([-7.648277352308567, 108.6452408177934]).addTo(petaku).bindPopup('PUSAT BUDIDAYA IKAN HIAS <br> KABUPATEN PANGANDARAN <br> Karang anyar RT 05/03, desa, Purbahayu, Kecamatan Pangandaran, Kabupaten Pangandaran, Jawa Barat 46396');
+          L.marker([-8.195495745046241, 113.69549509423352]).addTo(petaku).bindPopup('PUSAT CENTRAL TOKO IKAN HIAS <br> KABUPATEN JEMBER <br> Perumahan Pondok Gede Blok DA-01, Gumuksari, Tegal Besar, Kecamatan Kaliwates, Kabupaten Jember, Jawa Timur 68131');
+          
+      </script>
+
+  </body>
+</html>
+
